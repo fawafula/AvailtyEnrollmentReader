@@ -12,3 +12,4 @@ namespace AvailtyEnrollmentReader.Domain.ProcessObjects
     {
     }
 }
+
