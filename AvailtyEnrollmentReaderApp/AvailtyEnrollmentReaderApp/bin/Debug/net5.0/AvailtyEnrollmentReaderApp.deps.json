@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v5.0": {
       "AvailtyEnrollmentReaderApp/1.0.0": {
+        "dependencies": {
+          "AvailtyEnrollmentReader.ClassLibrary": "1.0.0"
+        },
         "runtime": {
           "AvailtyEnrollmentReaderApp.dll": {}
+        }
+      },
+      "AvailtyEnrollmentReader.ClassLibrary/1.0.0": {
+        "runtime": {
+          "AvailtyEnrollmentReader.ClassLibrary.dll": {}
         }
       }
     }
   },
   "libraries": {
     "AvailtyEnrollmentReaderApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AvailtyEnrollmentReader.ClassLibrary/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

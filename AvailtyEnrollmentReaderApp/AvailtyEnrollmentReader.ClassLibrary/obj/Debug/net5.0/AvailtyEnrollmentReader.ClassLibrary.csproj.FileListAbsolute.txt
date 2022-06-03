@@ -1,0 +1,12 @@
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.ClassLibrary\bin\Debug\net5.0\AvailtyEnrollmentReader.ClassLibrary.deps.json
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.ClassLibrary\bin\Debug\net5.0\AvailtyEnrollmentReader.ClassLibrary.dll
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.ClassLibrary\bin\Debug\net5.0\ref\AvailtyEnrollmentReader.ClassLibrary.dll
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.ClassLibrary\bin\Debug\net5.0\AvailtyEnrollmentReader.ClassLibrary.pdb
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.ClassLibrary\obj\Debug\net5.0\AvailtyEnrollmentReader.ClassLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.ClassLibrary\obj\Debug\net5.0\AvailtyEnrollmentReader.ClassLibrary.AssemblyInfoInputs.cache
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.ClassLibrary\obj\Debug\net5.0\AvailtyEnrollmentReader.ClassLibrary.AssemblyInfo.cs
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.ClassLibrary\obj\Debug\net5.0\AvailtyEnrollmentReader.ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.ClassLibrary\obj\Debug\net5.0\AvailtyEnrollmentReader.ClassLibrary.dll
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.ClassLibrary\obj\Debug\net5.0\ref\AvailtyEnrollmentReader.ClassLibrary.dll
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.ClassLibrary\obj\Debug\net5.0\AvailtyEnrollmentReader.ClassLibrary.pdb
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.ClassLibrary\obj\Debug\net5.0\AvailtyEnrollmentReader.ClassLibrary.csproj.AssemblyReference.cache

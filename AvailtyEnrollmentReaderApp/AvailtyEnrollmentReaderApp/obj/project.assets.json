@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "AvailtyEnrollmentReader.ClassLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/AvailtyEnrollmentReader.ClassLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AvailtyEnrollmentReader.ClassLibrary.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "AvailtyEnrollmentReader.ClassLibrary/1.0.0": {
+      "type": "project",
+      "path": "../AvailtyEnrollmentReader.ClassLibrary/AvailtyEnrollmentReader.ClassLibrary.csproj",
+      "msbuildProject": "../AvailtyEnrollmentReader.ClassLibrary/AvailtyEnrollmentReader.ClassLibrary.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "AvailtyEnrollmentReader.ClassLibrary >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\waful\\.nuget\\packages\\": {},
@@ -40,7 +59,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\waful\\source\\repos\\fawafula\\AvailityHomework\\AvailtyEnrollmentReader\\AvailtyEnrollmentReaderApp\\AvailtyEnrollmentReader.ClassLibrary\\AvailtyEnrollmentReader.ClassLibrary.csproj": {
+              "projectPath": "C:\\Users\\waful\\source\\repos\\fawafula\\AvailityHomework\\AvailtyEnrollmentReader\\AvailtyEnrollmentReaderApp\\AvailtyEnrollmentReader.ClassLibrary\\AvailtyEnrollmentReader.ClassLibrary.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
