@@ -1,4 +1,6 @@
 ﻿using AvailtyEnrollmentReader.ClassLibrary.Interfaces;
+using AvailtyEnrollmentReader.ClassLibrary.Models;
+using AvailtyEnrollmentReader.Domain.ProcessObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,9 +27,15 @@ namespace AvailtyEnrollmentReader.Domain.Tools
         #endregion
 
         #region Methods
-        public IEnrollmentFile ReadCSVFile(string filePath)
+
+        public List<string> ReadCSVFile(EnrollmentFileModel file)
         {
-            throw new NotImplementedException();
+            var listOfRowsFromFile = new List<string>();
+
+            // Read content of each CSV file.
+            Console.WriteLine("Read content of each CSV file.");
+
+            return listOfRowsFromFile;
         }
         #endregion
 

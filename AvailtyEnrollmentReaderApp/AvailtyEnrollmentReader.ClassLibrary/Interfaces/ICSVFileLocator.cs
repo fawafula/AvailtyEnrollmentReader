@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace AvailtyEnrollmentReader.ClassLibrary.Interfaces
 {
-    public interface ICSVFileReader
+    public interface ICSVFileLocator
     {
-        List<string> ReadCSVFile(EnrollmentFileModel file);
+        IEnumerable<EnrollmentFileModel> LocateCSVFiles();
     }
 }

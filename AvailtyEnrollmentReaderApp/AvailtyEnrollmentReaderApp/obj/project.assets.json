@@ -11,6 +11,19 @@
         "runtime": {
           "bin/placeholder/AvailtyEnrollmentReader.ClassLibrary.dll": {}
         }
+      },
+      "AvailtyEnrollmentReader.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "AvailtyEnrollmentReader.ClassLibrary": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AvailtyEnrollmentReader.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AvailtyEnrollmentReader.Domain.dll": {}
+        }
       }
     }
   },
@@ -19,11 +32,17 @@
       "type": "project",
       "path": "../AvailtyEnrollmentReader.ClassLibrary/AvailtyEnrollmentReader.ClassLibrary.csproj",
       "msbuildProject": "../AvailtyEnrollmentReader.ClassLibrary/AvailtyEnrollmentReader.ClassLibrary.csproj"
+    },
+    "AvailtyEnrollmentReader.Domain/1.0.0": {
+      "type": "project",
+      "path": "../AvailtyEnrollmentReader.Domain/AvailtyEnrollmentReader.Domain.csproj",
+      "msbuildProject": "../AvailtyEnrollmentReader.Domain/AvailtyEnrollmentReader.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "AvailtyEnrollmentReader.ClassLibrary >= 1.0.0"
+      "AvailtyEnrollmentReader.ClassLibrary >= 1.0.0",
+      "AvailtyEnrollmentReader.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -62,6 +81,9 @@
           "projectReferences": {
             "C:\\Users\\waful\\source\\repos\\fawafula\\AvailityHomework\\AvailtyEnrollmentReader\\AvailtyEnrollmentReaderApp\\AvailtyEnrollmentReader.ClassLibrary\\AvailtyEnrollmentReader.ClassLibrary.csproj": {
               "projectPath": "C:\\Users\\waful\\source\\repos\\fawafula\\AvailityHomework\\AvailtyEnrollmentReader\\AvailtyEnrollmentReaderApp\\AvailtyEnrollmentReader.ClassLibrary\\AvailtyEnrollmentReader.ClassLibrary.csproj"
+            },
+            "C:\\Users\\waful\\source\\repos\\fawafula\\AvailityHomework\\AvailtyEnrollmentReader\\AvailtyEnrollmentReaderApp\\AvailtyEnrollmentReader.Domain\\AvailtyEnrollmentReader.Domain.csproj": {
+              "projectPath": "C:\\Users\\waful\\source\\repos\\fawafula\\AvailityHomework\\AvailtyEnrollmentReader\\AvailtyEnrollmentReaderApp\\AvailtyEnrollmentReader.Domain\\AvailtyEnrollmentReader.Domain.csproj"
             }
           }
         }

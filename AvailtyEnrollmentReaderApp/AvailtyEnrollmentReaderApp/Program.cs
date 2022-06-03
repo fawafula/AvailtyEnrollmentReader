@@ -1,4 +1,5 @@
 ﻿using AvailtyEnrollmentReader.ClassLibrary.Models;
+using AvailtyEnrollmentReader.Domain.Tools;
 using System;
 
 namespace AvailtyEnrollmentReaderApp
@@ -7,16 +8,22 @@ namespace AvailtyEnrollmentReaderApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("EnrollmentReared Application starting...");
 
-            // Search for only CSV files within the folder which has both CSV and EDI files.
-            // Read content of each CSV file.
-            //Sort the data as below;
-            // Separate enrollees by Insurance company.
-            // sort the names in ascending alphabetical order.
-            // If there are duplicate Ids, for same insurance company, then only record the highest version.
-            // Save the separated enrollees to its own file.
+            var inputDirectoryPath = @"C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\SampleDocuments";
+            var outputDirectoryPath = @"C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\SampleOutputs";
+            
+            ApplicationInstance instance = new ApplicationInstance(new CSVFileLocator(inputDirectoryPath), new CSVFileReader(), new CSVDataSorter(), new CSVFileWriter(outputDirectoryPath));
+
+            instance.RunApplication();
+            
+            Console.WriteLine("Press any key to close application.");
+            Console.ReadLine();
+
+            
 
         }
+
+        
     }
 }

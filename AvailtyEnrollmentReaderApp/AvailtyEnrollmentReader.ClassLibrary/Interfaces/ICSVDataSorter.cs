@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace AvailtyEnrollmentReader.ClassLibrary.Interfaces
 {
-    public interface ICSVFileSorter
+    public interface ICSVDataSorter
     {
-        IEnrollmentFile SortCSVFile(IEnrollmentFile fileToSort);
+        List<string> SortCSVData(List<string> dataToSort);
 
     }
 }
