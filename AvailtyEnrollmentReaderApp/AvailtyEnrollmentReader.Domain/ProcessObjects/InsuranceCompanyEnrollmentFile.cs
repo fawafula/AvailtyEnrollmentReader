@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AvailtyEnrollmentReader.Domain.ProcessObjects
 {
-    public class InsuranceCompanyEnrollmentFile : EnrollmentFileModel, IEnrollmentFile
+    public class InsuranceCompanyEnrollmentFile : EnrollmentRecordModel, IEnrollmentRecord
     {
     }
 }

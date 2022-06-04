@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AvailtyEnrollmentReader.ClassLibrary.Interfaces
 {
-    public interface IEnrollmentFile
+    public interface IEnrollmentRecord
     {
         string UserId { get; set; }
         string FirstName { get; set; }

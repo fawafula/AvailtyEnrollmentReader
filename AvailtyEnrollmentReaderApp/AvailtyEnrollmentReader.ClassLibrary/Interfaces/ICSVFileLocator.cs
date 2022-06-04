@@ -9,6 +9,6 @@ namespace AvailtyEnrollmentReader.ClassLibrary.Interfaces
 {
     public interface ICSVFileLocator
     {
-        IEnumerable<EnrollmentFileModel> LocateCSVFiles();
+        string[] LocateCSVFiles();
     }
 }
