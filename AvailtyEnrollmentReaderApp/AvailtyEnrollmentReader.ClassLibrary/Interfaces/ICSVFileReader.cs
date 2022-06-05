@@ -9,6 +9,7 @@ namespace AvailtyEnrollmentReader.ClassLibrary.Interfaces
 {
     public interface ICSVFileReader
     {
+        string CSVFileHeaderRow { get; }
         string[] ReadCSVFile(string filePath);
     }
 }

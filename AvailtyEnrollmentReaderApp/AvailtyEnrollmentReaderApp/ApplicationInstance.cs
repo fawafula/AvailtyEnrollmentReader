@@ -19,6 +19,7 @@ namespace AvailtyEnrollmentReaderApp
         private List<EnrollmentRecordModel> _csvFileDataRecordsFromAllCsvFiles;
         private List<EnrollmentRecordModel> _sortedData;
         private List<InsuranceCompanyFileModel> _insuranceCompanyFiles;
+        private List<string> _fileHeaderRows;
 
         #endregion
 
@@ -36,6 +37,7 @@ namespace AvailtyEnrollmentReaderApp
             _unmappedCsvRecordsFromAllFiles = new List<string>();
             _csvFileDataRecordsFromAllCsvFiles = new List<EnrollmentRecordModel>();
             _insuranceCompanyFiles = new List<InsuranceCompanyFileModel>();
+            _fileHeaderRows = new List<string>();   
             _sortedData = new List<EnrollmentRecordModel>();
             _fileLocator = fileLocator;
             _fileReader = fileReader;
@@ -55,6 +57,8 @@ namespace AvailtyEnrollmentReaderApp
                 foreach (var csvFile in csvFiles)
                 {
                     var csvFileData = _fileReader.ReadCSVFile(csvFile).ToList();
+                    var csvFileHeaderRow = _fileReader.CSVFileHeaderRow;
+                    _fileHeaderRows.Add(csvFileHeaderRow);
                     _unmappedCsvRecordsFromAllFiles.AddRange(csvFileData);
                 }
 
@@ -92,9 +96,11 @@ namespace AvailtyEnrollmentReaderApp
                 // Save the separated enrollees to its own file.
                 Console.WriteLine(" Save the separated enrollees to its own file...");
 
+
                 foreach (var insuranceCompanyFile in _insuranceCompanyFiles)
                 {
-                    _fileWriter.WriteCsvFile();
+                    var fileName = $"{String.Concat(insuranceCompanyFile.InsuranceCompanyName.Where( c=> !Char.IsWhiteSpace(c)))}File.csv";
+                    _fileWriter.WriteCsvFile(_fileHeaderRows.FirstOrDefault(), fileName);
                 }
                
                 // Complete application process.
@@ -105,6 +111,10 @@ namespace AvailtyEnrollmentReaderApp
             {
                 throw new Exception(ex.Message);
             }
+
+
+
+
         }
         #endregion
 

@@ -10,12 +10,13 @@ namespace AvailtyEnrollmentReader.Domain.Tools
     /// </summary>
     public class CSVFileReader : ICSVFileReader
     {
-        #region Fields
 
+        #region Fields
+        private string _csvFileHeaderRow;
         #endregion
 
         #region Properties
-
+        public string CSVFileHeaderRow { get => _csvFileHeaderRow; }
         #endregion
 
         #region Constructor
@@ -29,7 +30,11 @@ namespace AvailtyEnrollmentReader.Domain.Tools
             try
             {
                 Console.WriteLine("Reading content of CSV file.");
-                return File.ReadAllLines(filePath).Skip(1).ToArray();
+                var fileDataRows = File.ReadAllLines(filePath);
+
+                _csvFileHeaderRow =fileDataRows.First();
+                
+                return fileDataRows.Skip(1).ToArray();
             }
             catch (Exception ex)
             {

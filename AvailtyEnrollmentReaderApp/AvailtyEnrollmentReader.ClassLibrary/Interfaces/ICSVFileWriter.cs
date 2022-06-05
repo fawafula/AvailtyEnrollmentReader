@@ -8,6 +8,6 @@ namespace AvailtyEnrollmentReader.ClassLibrary.Interfaces
 {
     public interface ICSVFileWriter
     {
-        void WriteCsvFile();
+        void WriteCsvFile(string fileHeaderRow, string fileName);
     }
 }

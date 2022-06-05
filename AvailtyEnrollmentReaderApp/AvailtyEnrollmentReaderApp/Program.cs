@@ -33,7 +33,9 @@ namespace AvailtyEnrollmentReaderApp
             {
                 Console.WriteLine("The input directory path provided does not exist. Please provide a valid directory path and run application again.");
             }
+
             
+
             Console.WriteLine("Press any key to close application.");
             Console.ReadLine();
         }
