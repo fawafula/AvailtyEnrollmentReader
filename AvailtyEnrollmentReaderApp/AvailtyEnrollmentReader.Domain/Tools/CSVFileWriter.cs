@@ -24,7 +24,7 @@ namespace AvailtyEnrollmentReader.Domain.Tools
 
                 var filePath = Path.Combine(_outputDirectoryPath, fileName);
 
-                using (StreamWriter file = new StreamWriter(@filePath, true))
+                using (StreamWriter file = new StreamWriter(@filePath, false))
                 {
                     file.WriteLine(fileHeaderRow);
                 }
