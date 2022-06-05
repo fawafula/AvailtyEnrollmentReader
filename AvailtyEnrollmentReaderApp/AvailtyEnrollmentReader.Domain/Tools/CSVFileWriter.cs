@@ -17,6 +17,14 @@ namespace AvailtyEnrollmentReader.Domain.Tools
         }
         public void WriteCsvFile()
         {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
             
         }
     }

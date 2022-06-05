@@ -28,27 +28,45 @@ namespace AvailtyEnrollmentReader.Domain.Tools
         #region Methods
         public EnrollmentRecordModel MapData(string dataRow)
         {
-            var record = new EnrollmentRecordModel();
+            try
+            {
+                var record = new EnrollmentRecordModel();
 
-            var data = dataRow.Split(",");
-            record.UserId = data[0];
-            record.FirstName = data[1];
-            record.LastName = data[2];
-            record.Version = Int32.Parse(data[3]);
-            record.InsuranceCompany = data[4];
+                var data = dataRow.Split(",");
+                record.UserId = data[0];
+                record.FirstName = data[1];
+                record.LastName = data[2];
+                record.Version = Int32.Parse(data[3]);
+                record.InsuranceCompany = data[4];
 
-            return record;
+                return record;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+           
         }
 
         public List<EnrollmentRecordModel> MapDataToList(List<string> dataRows)
         {
-            foreach (var dataRow in dataRows)
+            try
             {
-                var mappedData = MapData(dataRow);
-                _records.Add(mappedData);
-            }
+                foreach (var dataRow in dataRows)
+                {
+                    var mappedData = MapData(dataRow);
+                    _records.Add(mappedData);
+                }
 
-            return MappedEnrollmentModels;
+                return MappedEnrollmentModels;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+            
         }
         #endregion
 

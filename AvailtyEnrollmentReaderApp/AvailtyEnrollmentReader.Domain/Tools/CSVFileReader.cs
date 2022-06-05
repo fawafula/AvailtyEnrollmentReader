@@ -26,10 +26,15 @@ namespace AvailtyEnrollmentReader.Domain.Tools
 
         public string[] ReadCSVFile(string filePath)
         {
-
-            // Read content of each CSV file.
-            Console.WriteLine("Reading content of CSV file.");
-            return File.ReadAllLines(filePath).Skip(1).ToArray();
+            try
+            {
+                Console.WriteLine("Reading content of CSV file.");
+                return File.ReadAllLines(filePath).Skip(1).ToArray();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
         #endregion
 

@@ -30,15 +30,24 @@ namespace AvailtyEnrollmentReader.Domain.Tools
         #region Methods
         public List<EnrollmentRecordModel> SortCSVData(List<EnrollmentRecordModel> dataToSort)
         {
-           
-            //Sort the data as below;
-            Console.WriteLine("Sorting the data:");
+            try
+            {
+                //Sort the data as below;
+                Console.WriteLine("Sorting the data:");
 
-            // sort the names in ascending alphabetical order.
-            Console.WriteLine("sort the names in ascending alphabetical order and removing duplicates.");
-            var sortedData = dataToSort.OrderBy(x => x.LastName).Distinct(_customComparer).ToList();
+                // sort the names in ascending alphabetical order.
+                Console.WriteLine("sort the names in ascending alphabetical order and removing duplicates.");
+                var sortedData = dataToSort.OrderBy(x => x.LastName).Distinct(_customComparer).ToList();
+
+                return sortedData;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+           
             
-            return sortedData;
         }
         #endregion
 
