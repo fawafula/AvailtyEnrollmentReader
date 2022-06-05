@@ -1,9 +1,8 @@
 ﻿using AvailtyEnrollmentReader.ClassLibrary.Interfaces;
+using AvailtyEnrollmentReader.ClassLibrary.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AvailtyEnrollmentReader.Domain.Tools
 {
@@ -12,8 +11,9 @@ namespace AvailtyEnrollmentReader.Domain.Tools
     /// </summary>
     public class CSVDataSorter : ICSVDataSorter
     {
-        #region Fields
 
+        #region Fields
+        private ICSVCustomComparer _customComparer;
         #endregion
 
         #region Properties
@@ -21,28 +21,23 @@ namespace AvailtyEnrollmentReader.Domain.Tools
         #endregion
 
         #region Constructors
-        public CSVDataSorter()
+        public CSVDataSorter(ICSVCustomComparer customComparer)
         {
-
+            _customComparer = customComparer;
         }
         #endregion
 
         #region Methods
-        public List<string> SortCSVData(List<string> dataToSort)
+        public List<EnrollmentRecordModel> SortCSVData(List<EnrollmentRecordModel> dataToSort)
         {
-            var sortedData = new List<string>();
+           
             //Sort the data as below;
             Console.WriteLine("Sorting the data:");
 
             // sort the names in ascending alphabetical order.
             Console.WriteLine("sort the names in ascending alphabetical order");
-
-            // If there are duplicate Ids, for same insurance company, then only record the highest version.
-            Console.WriteLine("If there are duplicate Ids, for same insurance company, then only record the highest version");
-
-            // Separate enrollees by Insurance company.
-            Console.WriteLine("Separate enrollees by Insurance company");
-
+            var sortedData = dataToSort.OrderBy(x => x.LastName).Distinct(_customComparer).ToList();
+            
             return sortedData;
         }
         #endregion

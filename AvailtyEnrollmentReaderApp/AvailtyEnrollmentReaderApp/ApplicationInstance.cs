@@ -12,23 +12,33 @@ namespace AvailtyEnrollmentReaderApp
 
         private ICSVFileLocator _fileLocator;
         private ICSVFileReader _fileReader;
+        private IEnrollmentRecordMapper _recordMapper;
         private ICSVDataSorter _dataSorter;
         private ICSVFileWriter _fileWriter;
-        private List<string> _csvFileDataRowsFromAllCsvFiles;
+        private List<string> _unmappedCsvRecordsFromAllFiles;
+        private List<EnrollmentRecordModel> _csvFileDataRecordsFromAllCsvFiles;
+        private List<EnrollmentRecordModel> _sortedData;
+        private List<InsuranceCompanyFileModel> _insuranceCompanyFiles;
+
         #endregion
 
 
         #region Properties
-        public List<string> CsvFileDataRowsFromAllCsvFiles { get => _csvFileDataRowsFromAllCsvFiles; }
-        public List<string> SortedCSVData { get; set; }
+        public List<EnrollmentRecordModel> CsvFileDataRecordsFromAllCsvFiles { get => _csvFileDataRecordsFromAllCsvFiles; }
+        public List<EnrollmentRecordModel> SortedCSVData { get => _sortedData; }
+        public List<InsuranceCompanyFileModel> InsuranceCompanyFiles { get => _insuranceCompanyFiles; }
         #endregion
 
         #region Constructors
-        public ApplicationInstance(ICSVFileLocator fileLocator, ICSVFileReader fileReader, ICSVDataSorter dataSorter, ICSVFileWriter fileWriter)
+        public ApplicationInstance(ICSVFileLocator fileLocator, ICSVFileReader fileReader, IEnrollmentRecordMapper recordMapper, ICSVDataSorter dataSorter, ICSVFileWriter fileWriter)
         {
-            _csvFileDataRowsFromAllCsvFiles = new List<string>();
+            _unmappedCsvRecordsFromAllFiles = new List<string>();
+            _csvFileDataRecordsFromAllCsvFiles = new List<EnrollmentRecordModel>();
+            _insuranceCompanyFiles = new List<InsuranceCompanyFileModel>();
+            _sortedData = new List<EnrollmentRecordModel>();
             _fileLocator = fileLocator;
             _fileReader = fileReader;
+            _recordMapper = recordMapper;
             _dataSorter = dataSorter;
             _fileWriter = fileWriter;
         }
@@ -44,15 +54,47 @@ namespace AvailtyEnrollmentReaderApp
             foreach (var csvFile in csvFiles)
             {
                 var csvFileData = _fileReader.ReadCSVFile(csvFile).ToList();
-                _csvFileDataRowsFromAllCsvFiles.AddRange(csvFileData);
+                _unmappedCsvRecordsFromAllFiles.AddRange(csvFileData);
             }
 
-            foreach (var row in _csvFileDataRowsFromAllCsvFiles)
+            // Map from string to EnrollmentRecordModel.
+            _csvFileDataRecordsFromAllCsvFiles = _recordMapper.MapDataToList(_unmappedCsvRecordsFromAllFiles);
+
+            // Checking....
+            foreach (var record in _csvFileDataRecordsFromAllCsvFiles)
             {
-                Console.WriteLine(row);
+                Console.WriteLine($"{record.FirstName}, {record.LastName}, {record.Version}, {record.UserId}, {record.InsuranceCompany}");
             }
-            // Sort the data from all csv files.                           
-            SortedCSVData = _dataSorter.SortCSVData(CsvFileDataRowsFromAllCsvFiles);
+
+            // Separate enrollees by Insurance company.
+            // Sort the data in each grouped CSV file by ascending order.       
+            Console.WriteLine("Separating enrollees by Insurance company and Sorting enrollees in ascending alphabetic order");
+
+            var groupedData = _csvFileDataRecordsFromAllCsvFiles.GroupBy(x => x.InsuranceCompany).ToList();
+            foreach (var group in groupedData) 
+            {
+                var insuranceCompanyFile = new InsuranceCompanyFileModel
+                {
+                    InsuranceCompanyName = group.Key,
+                    EnrollmentRecords = _dataSorter.SortCSVData(group.ToList())
+                };
+                _insuranceCompanyFiles.Add(insuranceCompanyFile);
+            }
+
+            // Checking
+            foreach (var insuranceCompanyFile in _insuranceCompanyFiles)
+            {
+                Console.WriteLine($"records that belong to the insurance company {insuranceCompanyFile.InsuranceCompanyName}");
+                foreach (var record in insuranceCompanyFile.EnrollmentRecords)
+                {
+                    Console.WriteLine($"{record.UserId}, {record.FirstName}, {record.LastName}, {record.Version}");
+                }
+
+            }
+
+           
+            // If there are duplicate Ids, for same insurance company, then only record the highest version.
+            Console.WriteLine("If there are duplicate Ids, for same insurance company, then only record the highest version");
 
             // Save the separated enrollees to its own file.
             Console.WriteLine(" Save the separated enrollees to its own file.");

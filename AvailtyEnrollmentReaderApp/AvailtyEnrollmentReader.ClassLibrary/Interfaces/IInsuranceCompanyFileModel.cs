@@ -7,9 +7,11 @@ using System.Threading.Tasks;
 
 namespace AvailtyEnrollmentReader.ClassLibrary.Interfaces
 {
-    public interface ICSVDataSorter
+    public interface IInsuranceCompanyFileModel
     {
-        List<EnrollmentRecordModel> SortCSVData(List<EnrollmentRecordModel> dataToSort);
+        string InsuranceCompanyName { get; set; }
 
+        List<EnrollmentRecordModel> EnrollmentRecords { get; set; }
+        
     }
 }

@@ -17,7 +17,9 @@ namespace AvailtyEnrollmentReaderApp
             
             ApplicationInstance instance = new ApplicationInstance(
                 new CSVFileLocator(inputDirectoryPath, fileExtension), 
-                new CSVFileReader(), new CSVDataSorter(), 
+                new CSVFileReader(),
+                new EnrollmenRecordMapper(),
+                new CSVDataSorter(new CSVCustomComparer()), 
                 new CSVFileWriter(outputDirectoryPath)
                );
 

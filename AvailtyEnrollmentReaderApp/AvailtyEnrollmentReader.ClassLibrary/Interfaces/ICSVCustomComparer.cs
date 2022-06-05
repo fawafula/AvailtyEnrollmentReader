@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace AvailtyEnrollmentReader.ClassLibrary.Interfaces
 {
-    public interface ICSVDataSorter
+    public interface ICSVCustomComparer : IEqualityComparer<EnrollmentRecordModel>
     {
-        List<EnrollmentRecordModel> SortCSVData(List<EnrollmentRecordModel> dataToSort);
-
+        new bool Equals(EnrollmentRecordModel oneRecord, EnrollmentRecordModel otherRecord);
+        new int GetHashCode(EnrollmentRecordModel record);
     }
 }

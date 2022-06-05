@@ -1,6 +1,7 @@
 ﻿using AvailtyEnrollmentReader.ClassLibrary.Interfaces;
 using System;
 using System.IO;
+using System.Linq;
 
 namespace AvailtyEnrollmentReader.Domain.Tools
 {
@@ -27,15 +28,8 @@ namespace AvailtyEnrollmentReader.Domain.Tools
         {
 
             // Read content of each CSV file.
-            Console.WriteLine("Read content of each CSV file.");
-            var fileData = File.ReadAllLines(filePath);
-            for (int i = 1; i < fileData.Length; i++)
-            {
-                Console.WriteLine(fileData[i]);
-
-            }
-
-            return fileData;
+            Console.WriteLine("Reading content of CSV file.");
+            return File.ReadAllLines(filePath).Skip(1).ToArray();
         }
         #endregion
 

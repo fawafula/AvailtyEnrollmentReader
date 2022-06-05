@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AvailtyEnrollmentReader.ClassLibrary.Models
 {
-    public class EnrollmentRecordModel : IEnrollmentRecord
+    public class EnrollmentRecordModel : IEnrollmentRecordModel
     {
         public string UserId { get; set; }
         public string FirstName { get; set; }
