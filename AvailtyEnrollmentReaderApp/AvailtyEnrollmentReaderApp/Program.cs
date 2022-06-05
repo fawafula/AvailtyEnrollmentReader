@@ -1,6 +1,7 @@
 ﻿using AvailtyEnrollmentReader.ClassLibrary.Models;
 using AvailtyEnrollmentReader.Domain.Tools;
 using System;
+using System.Configuration;
 
 namespace AvailtyEnrollmentReaderApp
 {
@@ -10,11 +11,10 @@ namespace AvailtyEnrollmentReaderApp
         {
             Console.WriteLine("EnrollmentReader Application starting...");
 
-            var inputDirectoryPath = @"C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\SampleDocuments";
-            var outputDirectoryPath = @"C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\SampleOutputs";
-            var fileExtension = "*.csv";
-            
-            
+            var inputDirectoryPath = ConfigurationManager.AppSettings["InputFolder"];
+            var outputDirectoryPath = ConfigurationManager.AppSettings["OutputFolder"];
+            var fileExtension = ConfigurationManager.AppSettings["FileTypeExtension"];
+
             ApplicationInstance instance = new ApplicationInstance(
                 new CSVFileLocator(inputDirectoryPath, fileExtension), 
                 new CSVFileReader(),
@@ -26,11 +26,7 @@ namespace AvailtyEnrollmentReaderApp
             instance.RunApplication();
             
             Console.WriteLine("Press any key to close application.");
-            
-            
             Console.ReadLine();
-
-            
 
         }
 

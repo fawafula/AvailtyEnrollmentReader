@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "fltn7CBT339tXuAmqwCbGdoc4cx96SCM3uB8zsiJXm0QMaGYFIS6X7xuEm8gY/RigjWE7AcnJSruMPytCeo7WA==",
+  "dgSpecHash": "prUUvFfW1aWzkYGb31yUEtkYxXw/JKWqGUCVE7SKuWHGquA1t/xNGQxO1GkzNR4y/KOGS9so9FSazse45cUHmA==",
   "success": true,
   "projectFilePath": "C:\\Users\\waful\\source\\repos\\fawafula\\AvailityHomework\\AvailtyEnrollmentReader\\AvailtyEnrollmentReaderApp\\AvailtyEnrollmentReaderApp\\AvailtyEnrollmentReaderApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\waful\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\waful\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.0\\system.configuration.configurationmanager.6.0.0.nupkg.sha512",
+    "C:\\Users\\waful\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\waful\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\waful\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
+    "C:\\Users\\waful\\.nuget\\packages\\system.security.cryptography.protecteddata\\6.0.0\\system.security.cryptography.protecteddata.6.0.0.nupkg.sha512",
+    "C:\\Users\\waful\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
+    "C:\\Users\\waful\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\waful\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

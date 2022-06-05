@@ -35,7 +35,7 @@ namespace AvailtyEnrollmentReader.Domain.Tools
             Console.WriteLine("Sorting the data:");
 
             // sort the names in ascending alphabetical order.
-            Console.WriteLine("sort the names in ascending alphabetical order");
+            Console.WriteLine("sort the names in ascending alphabetical order and removing duplicates.");
             var sortedData = dataToSort.OrderBy(x => x.LastName).Distinct(_customComparer).ToList();
             
             return sortedData;
