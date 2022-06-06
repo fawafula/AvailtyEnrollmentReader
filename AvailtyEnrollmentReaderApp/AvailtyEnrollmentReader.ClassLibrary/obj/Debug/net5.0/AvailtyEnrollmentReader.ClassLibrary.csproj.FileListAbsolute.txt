@@ -9,4 +9,3 @@ C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\Av
 C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.ClassLibrary\obj\Debug\net5.0\AvailtyEnrollmentReader.ClassLibrary.dll
 C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.ClassLibrary\obj\Debug\net5.0\ref\AvailtyEnrollmentReader.ClassLibrary.dll
 C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.ClassLibrary\obj\Debug\net5.0\AvailtyEnrollmentReader.ClassLibrary.pdb
-C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.ClassLibrary\obj\Debug\net5.0\AvailtyEnrollmentReader.ClassLibrary.csproj.AssemblyReference.cache

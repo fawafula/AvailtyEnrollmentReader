@@ -29,7 +29,7 @@ namespace AvailtyEnrollmentReader.Domain.Tools
         {
             try
             {
-                Console.WriteLine("Reading content of CSV file.");
+                Console.WriteLine("Reading content from a located CSV file...");
                 var fileDataRows = File.ReadAllLines(filePath);
 
                 _csvFileHeaderRow =fileDataRows.First();
@@ -38,7 +38,8 @@ namespace AvailtyEnrollmentReader.Domain.Tools
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                Console.WriteLine("Application could not read data from the provided file path.");
+                throw new Exception(ex.InnerException.Message);
             }
         }
         #endregion

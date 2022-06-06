@@ -32,19 +32,15 @@ namespace AvailtyEnrollmentReader.Domain.Tools
         {
             try
             {
-                //Sort the data as below;
-                Console.WriteLine("Sorting the data:");
-
-                // sort the names in ascending alphabetical order.
-                Console.WriteLine("sort the names in ascending alphabetical order and removing duplicates.");
+                Console.WriteLine("Sorting data in each csv file:");
                 var sortedData = dataToSort.OrderBy(x => x.LastName).Distinct(_customComparer).ToList();
 
                 return sortedData;
             }
             catch (Exception ex)
             {
-
-                throw new Exception(ex.Message);
+                Console.WriteLine("Application could not sort the CSV data from the given file.");
+                throw new Exception(ex.InnerException.Message);
             }
            
             

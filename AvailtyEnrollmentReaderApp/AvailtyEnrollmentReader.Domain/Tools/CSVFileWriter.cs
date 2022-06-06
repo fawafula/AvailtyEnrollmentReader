@@ -21,6 +21,8 @@ namespace AvailtyEnrollmentReader.Domain.Tools
         {
             try
             {
+                Console.WriteLine("Writing to a new csv file belonging to an insurance company.");
+
                 Directory.CreateDirectory(_outputDirectoryPath);
 
                 var filePath = Path.Combine(_outputDirectoryPath, fileName);
@@ -37,14 +39,25 @@ namespace AvailtyEnrollmentReader.Domain.Tools
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                Console.WriteLine("Application could not Write to a new csv file.");
+                throw new Exception(ex.InnerException.Message);
             }
             
         }
 
         public string CreateHeader(List<string> columnTitles)
         {
-            return string.Join(",", columnTitles);
+            try
+            {
+                return string.Join(",", columnTitles);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Could not Create Header with provided column titles.");
+
+                throw new Exception(ex.InnerException.Message);
+            }
+           
         }
     }
 }

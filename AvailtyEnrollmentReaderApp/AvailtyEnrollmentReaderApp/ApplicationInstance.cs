@@ -52,6 +52,7 @@ namespace AvailtyEnrollmentReaderApp
         {
             try
             {
+                Console.WriteLine("Reading all .csv files from input diectory path...");
                 var csvFiles = _fileLocator.LocateCSVFiles();
 
                 foreach (var csvFile in csvFiles)
@@ -64,13 +65,8 @@ namespace AvailtyEnrollmentReaderApp
 
                 _csvFileDataRecordsFromAllCsvFiles = _recordMapper.MapDataToList(_unmappedCsvRecordsFromAllFiles);
 
-                // Checking....
-                foreach (var record in _csvFileDataRecordsFromAllCsvFiles)
-                {
-                    Console.WriteLine($"{record.FirstName}, {record.LastName}, {record.Version}, {record.UserId}, {record.InsuranceCompany}");
-                }
 
-                Console.WriteLine("Separating enrollees by Insurance company and Sorting enrollees in ascending alphabetic order...");
+                Console.WriteLine("Sorting: Grouping enrollees by insurance company, Ordering each group alphabetically and removing duplicates....");
 
                 var groupedData = _csvFileDataRecordsFromAllCsvFiles.GroupBy(x => x.InsuranceCompany).ToList();
                 foreach (var group in groupedData)
@@ -83,18 +79,8 @@ namespace AvailtyEnrollmentReaderApp
                     _insuranceCompanyFiles.Add(insuranceCompanyFile);
                 }
 
-                // Checking
-                foreach (var insuranceCompanyFile in _insuranceCompanyFiles)
-                {
-                    Console.WriteLine($"records that belong to the insurance company {insuranceCompanyFile.InsuranceCompanyName}");
-                    foreach (var record in insuranceCompanyFile.EnrollmentRecords)
-                    {
-                        Console.WriteLine($"{record.UserId}, {record.FirstName}, {record.LastName}, {record.Version}");
-                    }
-                }
 
-                // Save the separated enrollees to its own file.
-                Console.WriteLine(" Save the separated enrollees to its own file...");
+                Console.WriteLine(" Writing each insurance company enrollee group to its own file...");
 
 
                 foreach (var insuranceCompanyFile in _insuranceCompanyFiles)
@@ -109,7 +95,8 @@ namespace AvailtyEnrollmentReaderApp
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                Console.WriteLine("Application process failed: Something went wrong...");
+                throw new Exception(ex.InnerException.Message);
             }
 
 

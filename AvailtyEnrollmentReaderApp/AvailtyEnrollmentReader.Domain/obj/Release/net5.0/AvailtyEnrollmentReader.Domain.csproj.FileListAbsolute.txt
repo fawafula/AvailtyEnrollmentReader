@@ -1,0 +1,15 @@
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.Domain\bin\Release\net5.0\AvailtyEnrollmentReader.Domain.deps.json
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.Domain\bin\Release\net5.0\AvailtyEnrollmentReader.Domain.dll
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.Domain\bin\Release\net5.0\ref\AvailtyEnrollmentReader.Domain.dll
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.Domain\bin\Release\net5.0\AvailtyEnrollmentReader.Domain.pdb
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.Domain\bin\Release\net5.0\AvailtyEnrollmentReader.ClassLibrary.dll
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.Domain\bin\Release\net5.0\AvailtyEnrollmentReader.ClassLibrary.pdb
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.Domain\obj\Release\net5.0\AvailtyEnrollmentReader.Domain.csproj.AssemblyReference.cache
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.Domain\obj\Release\net5.0\AvailtyEnrollmentReader.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.Domain\obj\Release\net5.0\AvailtyEnrollmentReader.Domain.AssemblyInfoInputs.cache
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.Domain\obj\Release\net5.0\AvailtyEnrollmentReader.Domain.AssemblyInfo.cs
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.Domain\obj\Release\net5.0\AvailtyEnrollmentReader.Domain.csproj.CoreCompileInputs.cache
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.Domain\obj\Release\net5.0\AvailtyEnrollmentReader.Domain.csproj.CopyComplete
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.Domain\obj\Release\net5.0\AvailtyEnrollmentReader.Domain.dll
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.Domain\obj\Release\net5.0\ref\AvailtyEnrollmentReader.Domain.dll
+C:\Users\waful\source\repos\fawafula\AvailityHomework\AvailtyEnrollmentReader\AvailtyEnrollmentReaderApp\AvailtyEnrollmentReader.Domain\obj\Release\net5.0\AvailtyEnrollmentReader.Domain.pdb

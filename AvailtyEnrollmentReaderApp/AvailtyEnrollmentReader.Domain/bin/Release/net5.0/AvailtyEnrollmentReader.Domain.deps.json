@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "AvailtyEnrollmentReader.Domain/1.0.0": {
+        "dependencies": {
+          "AvailtyEnrollmentReader.ClassLibrary": "1.0.0"
+        },
+        "runtime": {
+          "AvailtyEnrollmentReader.Domain.dll": {}
+        }
+      },
+      "AvailtyEnrollmentReader.ClassLibrary/1.0.0": {
+        "runtime": {
+          "AvailtyEnrollmentReader.ClassLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AvailtyEnrollmentReader.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AvailtyEnrollmentReader.ClassLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

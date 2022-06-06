@@ -27,16 +27,24 @@ namespace AvailtyEnrollmentReader.Domain.Tools
         }
         public string[] LocateCSVFiles()
         {
-            // Search for only CSV files within the folder which has both CSV and EDI files.
-            Console.WriteLine("Search for only CSV files within the folder which has both CSV and EDI files");
-
-            var csvFilePaths = Directory.GetFiles(_directoryPath, _fileExtension, SearchOption.AllDirectories);
-            foreach (var path in csvFilePaths)
+            try
             {
-                Console.WriteLine(path);
-            }
+                Console.WriteLine("Searching for only CSV files within the folder which has both CSV and EDI files...");
 
-            return csvFilePaths;
+                var csvFilePaths = Directory.GetFiles(_directoryPath, _fileExtension, SearchOption.AllDirectories);
+                foreach (var path in csvFilePaths)
+                {
+                    Console.WriteLine(path);
+                }
+
+                return csvFilePaths;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Application could not locate csv files from the provided directory path.");
+                throw new Exception(ex.InnerException.Message);
+            }
+           
 
         }
     }
