@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AvailtyEnrollmentReader.ClassLibrary.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace AvailtyEnrollmentReader.ClassLibrary.Interfaces
 {
     public interface ICSVFileWriter
     {
-        void WriteCsvFile(string fileHeaderRow, string fileName);
+        void WriteCsvFile(string fileHeaderRow, string fileName, InsuranceCompanyFileModel dataToWrite);
     }
 }

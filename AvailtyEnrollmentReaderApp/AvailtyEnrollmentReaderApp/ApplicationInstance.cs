@@ -100,7 +100,7 @@ namespace AvailtyEnrollmentReaderApp
                 foreach (var insuranceCompanyFile in _insuranceCompanyFiles)
                 {
                     var fileName = $"{String.Concat(insuranceCompanyFile.InsuranceCompanyName.Where( c=> !Char.IsWhiteSpace(c)))}File.csv";
-                    _fileWriter.WriteCsvFile(_fileHeaderRows.FirstOrDefault(), fileName);
+                    _fileWriter.WriteCsvFile(_fileHeaderRows.FirstOrDefault(), fileName, insuranceCompanyFile);
                 }
                
                 // Complete application process.

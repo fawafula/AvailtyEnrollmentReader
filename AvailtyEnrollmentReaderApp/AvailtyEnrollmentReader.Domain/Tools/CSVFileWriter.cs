@@ -1,4 +1,5 @@
 ﻿using AvailtyEnrollmentReader.ClassLibrary.Interfaces;
+using AvailtyEnrollmentReader.ClassLibrary.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -16,7 +17,7 @@ namespace AvailtyEnrollmentReader.Domain.Tools
         {
             _outputDirectoryPath = outputDirectoryPath;
         }
-        public void WriteCsvFile(string fileHeaderRow, string fileName)
+        public void WriteCsvFile(string fileHeaderRow, string fileName, InsuranceCompanyFileModel dataToWrite)
         {
             try
             {
@@ -27,6 +28,11 @@ namespace AvailtyEnrollmentReader.Domain.Tools
                 using (StreamWriter file = new StreamWriter(@filePath, false))
                 {
                     file.WriteLine(fileHeaderRow);
+                    foreach (var record in dataToWrite.EnrollmentRecords)
+                    {
+                        file.WriteLine($"{record.UserId},{record.FirstName},{record.LastName},{record.Version},{record.InsuranceCompany}");
+                    }
+                    
                 }
             }
             catch (Exception ex)
