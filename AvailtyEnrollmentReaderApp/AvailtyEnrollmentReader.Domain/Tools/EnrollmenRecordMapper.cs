@@ -33,10 +33,15 @@ namespace AvailtyEnrollmentReader.Domain.Tools
                 var record = new EnrollmentRecordModel();
 
                 var data = dataRow.Split(",");
+                int value;
                 record.UserId = data[0];
                 record.FirstName = data[1];
                 record.LastName = data[2];
-                record.Version = Int32.Parse(data[3]);
+                if (Int32.TryParse(data[3], out value))
+                {
+                    record.Version = Int32.Parse(data[3]);
+                }
+               
                 record.InsuranceCompany = data[4];
 
                 return record;
